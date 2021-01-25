@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scores From Maze Game</title>
+</head>
+<style>
+    body {background-color: powderblue;
+    }
+
+    h1 {color: rgb(31, 22, 159); 
+    background-color: aquamarine;
+    font-family: "Comic Sans MS";
+    font-size: 300%;
+    }
+    
+    table, th, td, tr { width: 50%;
+    font-family:  "Lucida Grande";
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+    }
+</style>
+<body>
+    <h1 >SCORES DISPLAY</h1>
+    <table>
+        <tr>
+            <th>Order</th>
+            <th>Name</th>
+            <th>Score (Descending Order)</th>
+        </tr>
+        {% for score in scores %}
+        <tr>
+            <td>{{scores.index(score)+1}}</td>
+            <td>{{score.name}}</td>
+            <td>{{score.score}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
